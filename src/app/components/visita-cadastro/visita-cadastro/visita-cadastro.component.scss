@@ -1,0 +1,48 @@
+.visita-cadastro {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+
+  h2 {
+    text-align: center;
+    color: #315973;
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #315973;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #a0dc48;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  button {
+    margin-top: 15px;
+    background-color: #315973;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #a0dc48;
+      color: #315973;
+    }
+  }
+}

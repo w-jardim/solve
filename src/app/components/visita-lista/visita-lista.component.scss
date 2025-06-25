@@ -1,0 +1,55 @@
+.visita-lista {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 10px;
+
+  h2 {
+    color: #315973;
+    margin-bottom: 10px;
+  }
+
+  .input-busca {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+
+    th, td {
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    th {
+      background-color: #315973;
+      color: white;
+    }
+
+    tbody tr:hover {
+      background-color: #a0dc48;
+      cursor: pointer;
+    }
+
+    .status {
+      font-weight: bold;
+      &.pendente {
+        color: #d9534f; /* vermelho */
+      }
+      &.concluída {
+        color: #5cb85c; /* verde */
+      }
+      &.concluida {
+        color: #5cb85c; /* verde para evitar erro acentuação */
+      }
+      /* Se quiser mais status, só criar aqui */
+    }
+  }
+}

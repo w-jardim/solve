@@ -1,0 +1,43 @@
+<section class="visita-lista">
+  <h2>📋 Lista de Visitas</h2>
+
+  <input
+    type="text"
+    placeholder="Buscar visitas..."
+    [(ngModel)]="filtroTexto"
+    (input)="filtrarVisitas()"
+    class="input-busca"
+  />
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Data</th>
+        <th>Status</th>
+        <th>Observações</th>
+        <th>Profissional</th>
+        <th>Cliente</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let visita of visitasFiltradas">
+        <td>{{ visita.id }}</td>
+        <td>{{ visita.data | date: 'dd/MM/yyyy HH:mm' }}</td>
+        <td>
+          <span class="status" [ngClass]="visita.status.toLowerCase()">
+            ✔ {{ visita.status }}
+          </span>
+        </td>
+        <td>{{ visita.observacoes }}</td>
+        <td>{{ visita.profissional }}</td>
+        <td>{{ visita.cliente }}</td>
+        <td>
+         <button (click)="editar(visita)">✏️</button>
+         <button (click)="excluir(visita)">🗑️</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

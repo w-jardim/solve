@@ -1,0 +1,31 @@
+.cabecalho {
+  display: flex;
+  flex-direction: column; /* empilha logo+titulo e menu */
+  align-items: center;
+  background-color: var(--cor-card);
+  padding: 1rem 2rem;
+  border-bottom: 2px solid var(--cor-borda);
+}
+
+.cabecalho > .topo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.cabecalho .logo {
+  height: 190px;
+}
+
+.cabecalho .titulo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  color: var(--cor-primaria);
+}
+
+.conteudo {
+  padding: 2rem;
+}

@@ -1,0 +1,7 @@
+<div class="barra-menu">
+  <nav class="menu" [class.open]="isOpen">
+    <button class="menu-toggle" aria-label="Abrir menu" (click)="toggleMenu()">☰</button>
+    <a routerLink="/visitas" routerLinkActive="active" (click)="closeMenu()">Visitas</a>
+    <a routerLink="/visitas/cadastro" routerLinkActive="active" (click)="closeMenu()">Cadastrar</a>
+  </nav>
+</div>

@@ -1,0 +1,26 @@
+<section class="visita-cadastro">
+  <h2>📝 Cadastro de Visita</h2>
+
+  <form (ngSubmit)="salvar()">
+    <label for="data">Data e Hora:</label>
+    <input type="datetime-local" id="data" [(ngModel)]="visita.data" name="data" required />
+
+    <label for="status">Status:</label>
+    <select id="status" [(ngModel)]="visita.status" name="status" required>
+      <option value="PENDENTE">PENDENTE</option>
+      <option value="CONCLUÍDA">CONCLUÍDA</option>
+      <option value="CANCELADA">CANCELADA</option>
+    </select>
+
+    <label for="observacoes">Observações:</label>
+    <textarea id="observacoes" [(ngModel)]="visita.observacoes" name="observacoes" rows="3"></textarea>
+
+    <label for="profissional">Profissional:</label>
+    <input type="text" id="profissional" [(ngModel)]="visita.profissional" name="profissional" required />
+
+    <label for="cliente">Cliente:</label>
+    <input type="text" id="cliente" [(ngModel)]="visita.cliente" name="cliente" required />
+
+    <button type="submit">Salvar</button>
+  </form>
+</section>

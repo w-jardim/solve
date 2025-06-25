@@ -1,0 +1,101 @@
+.barra-menu {
+  width: 100vw; /* largura total da viewport */
+  background-color: #315973; /* azul petróleo - ajuste se quiser outro tom */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* sombra leve para dar profundidade */
+  position: relative; /* para posicionamento interno */
+  z-index: 100; /* para garantir que fique sobre outros elementos */
+}
+
+.menu {
+  max-width: 1200px; /* ou qualquer valor que queira pra limitar largura do conteúdo */
+  margin: 0 auto; /* centraliza horizontalmente */
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 12px 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+  background: transparent; /* transparente para deixar o azul da barra aparecer */
+}
+
+/* seu restante do CSS menu permanece igual */
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  background-color: var(--cor-primaria);
+  padding: 10px 0;
+  box-sizing: border-box;
+  border-bottom: 2px solid var(--cor-secundaria);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+
+/* Links do menu */
+.menu a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  white-space: nowrap;
+}
+
+.menu a:hover,
+.menu a.active {
+  background-color: rgba(5, 40, 28, 0.959);
+  color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 5px rgba(160, 220, 72, 0.6);
+  cursor: pointer;
+}
+
+/* Botão hamburguer, escondido no desktop */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: var(--cor-fundo);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 15px;
+  user-select: none;
+}
+
+/* Responsivo - telas pequenas */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: 15px;
+  }
+
+  .menu a {
+    display: none;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 0;
+    border-top: 1px solid var(--cor-secundaria);
+  }
+
+  /* Menu aberto: mostra os links */
+  .menu.open a {
+    display: block;
+  }
+}
